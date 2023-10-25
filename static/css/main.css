@@ -1,0 +1,21 @@
+/* Estilo del fondo */
+body {
+    background-color: #001f3f;
+    /* Azul Marino */
+    font-family: Arial, sans-serif;
+    color: #333;
+    /* Color de texto principal */
+}
+
+/* Estilo del título */
+h1 {
+    color: #00a86b;
+    /* Verde Esmeralda */
+}
+
+/* Estilo de los detalles o elementos de llamado a la acción */
+a {
+    color: #ff6b6b;
+    /* Rojo Coral */
+    text-decoration: none;
+}

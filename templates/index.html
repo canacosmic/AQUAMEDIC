@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- Agregar cualquier contenido específico del encabezado si es necesario -->
+{% endblock %}
+
+{% block body %}
+<h1>Aquamedic - Diagnóstico de Enfermedades de Peces</h1>
+
+<form action="/procesar" method="post">
+    <h2>Síntomas:</h2>
+    <label for="sintoma1"><input type="checkbox" name="sintomas" value="Síntoma 1"> Síntoma 1</label><br>
+    <label for="sintoma2"><input type="checkbox" name="sintomas" value="Síntoma 2"> Síntoma 2</label><br>
+    <label for="sintoma3"><input type="checkbox" name="sintomas" value="Síntoma 3"> Síntoma 3</label><br>
+    <!-- Agregar más casillas de verificación para otros síntomas -->
+
+    <input type="submit" value="Obtener Diagnóstico">
+</form>
+
+<!-- Puedes agregar contenido adicional después del formulario si es necesario -->
+{% endblock %}
