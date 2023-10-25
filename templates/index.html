@@ -8,14 +8,39 @@
 <h1>Aquamedic - Diagnóstico de Enfermedades de Peces</h1>
 
 <form action="/procesar" method="post">
-    <h2>Síntomas:</h2>
-    <label for="sintoma1"><input type="checkbox" name="sintomas" value="Síntoma 1"> Síntoma 1</label><br>
-    <label for="sintoma2"><input type="checkbox" name="sintomas" value="Síntoma 2"> Síntoma 2</label><br>
-    <label for="sintoma3"><input type="checkbox" name="sintomas" value="Síntoma 3"> Síntoma 3</label><br>
-    <!-- Agregar más casillas de verificación para otros síntomas -->
+    <h2>Categoría 1: Síntomas de Comportamiento</h2>
+    {% for sintoma in sintomas_comportamiento %}
+    <label for="{{ sintoma }}"><input type="checkbox" name="sintomas" value="{{ sintoma }}"> {{ sintoma }}</label><br>
+    {% endfor}
+
+    <h2>Categoría 2: Síntomas de Excremento</h2>
+    {% for sintoma in sintomas_excremento %}
+    <label for="{{ sintoma }}"><input type="checkbox" name="sintomas" value="{{ sintoma }}"> {{ sintoma }}</label><br>
+    {% endfor}
+
+    <h2>Categoría 3: Síntomas del Cuerpo</h2>
+    {% for sintoma in sintomas_body %}
+    <label for="{{ sintoma }}"><input type="checkbox" name="sintomas" value="{{ sintoma }}"> {{ sintoma }}</label><br>
+    {% endfor}
+
+    <h2>Categoría 4: Síntomas de las Aletas</h2>
+    {% for sintoma in sintomas_fins %}
+    <label for="{{ sintoma }}"><input type="checkbox" name="sintomas" value="{{ sintoma }}"> {{ sintoma }}</label><br>
+    {% endfor}
+
+    <h2>Categoría 5: Síntomas de las Branquias</h2>
+    {% for sintoma in sintomas_branquias %}
+    <label for="{{ sintoma }}"><input type="checkbox" name="sintomas" value="{{ sintoma }}"> {{ sintoma }}</label><br>
+    {% endfor}
+
+    <h2>Categoría 6: Síntomas de la Cabeza</h2>
+    {% for sintoma in sintomas_cabeza %}
+    <label for="{{ sintoma }}"><input type="checkbox" name="sintomas" value="{{ sintoma }}"> {{ sintoma }}</label><br>
+    {% endfor}
 
     <input type="submit" value="Obtener Diagnóstico">
 </form>
+
 
 <!-- Puedes agregar contenido adicional después del formulario si es necesario -->
 {% endblock %}
